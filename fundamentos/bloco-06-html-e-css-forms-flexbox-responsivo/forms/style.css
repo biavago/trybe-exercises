@@ -1,9 +1,29 @@
+header {
+    color:cadetblue;
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
+
+}
+
 main {
+    display: flex;
+    flex-direction: column;
+}
+
+#personal-info {
+    margin-top: 3px;
+}
+
+#formulario {
+    border: solid 2px black;
+    height: 400px;
+    margin: auto;
+    padding: 2em;
+    width: 400px;
     text-align: center;
 }
 
-header {
-    font-size: 2em;
-    color:cadetblue;
-
+#buttons {
+    margin: auto;
 }
