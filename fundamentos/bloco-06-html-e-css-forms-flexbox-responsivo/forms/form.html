@@ -7,38 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrybeTrip</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <main>
         <header>
-            <h1>TrybeTrip</h1>
+            <h1 class="display-4 text-mutedS">TrybeTrip</h1>
         </header>
 
         <section>
             <form action="" method="get">
-                <section id="personal-info">
+                <section class="form-group" id="personal-info">
                     <label for="input-nome">Nome:</label>
-                    <input type="text" name="nome" id="input-nome" placeholder="Digite seu nome" maxlength="40"
-                        minlength="10" required>
-                    <br>
+                    <input class="form-control" type="text" name="nome" id="input-nome" placeholder="Digite seu nome"
+                        maxlength="40" minlength="10" required>
                     <br>
                     <label for="input-email">Email: </label>
-                    <input type="email" name="email" id="input-email" placeholder="Digite seu email" maxlength="50"
-                        minlength="10" required>
+                    <input class="form-control" type="email" name="email" id="input-email"
+                        placeholder="Digite seu email" maxlength="50" minlength="10" required>
                 </section>
                 <br>
-                <section id="opcoes">
-                    <label for="opcoes">Destino preferido:</label>
-                    <br>
-                    <br>
-                    <label for="opcao1"> <input type="radio" name="opcoes" id="opcao1" checked>Cidade </label>
-                    <label for="opcao2"> <input type="radio" name="opcoes" id="opcao2">Campo </label>
-                    <label for="opcao3"> <input type="radio" name="opcoes" id="opcao3">Praia </label>
-                    <label for="opcao4"> <input type="radio" name="opcoes" id="opcao4">Montanha </label>
+                <section class="form-group" id="opcoes">
+                    <label for="opcoes" class="form-check-label">Destino preferido:</label> <br>
+                    <label for="opcao1" class="form-check-label form-check-inline"> <input class="form-check-input"
+                            type="radio" name="opcoes" id="opcao1" checked>Cidade </label>
+                    <label for="opcao2" class="form-check-label form-check-inline"> <input class="form-check-input"
+                            type="radio" name="opcoes" id="opcao2">Campo
+                    </label>
+                    <label for="opcao3" class="form-check-label form-check-inline"> <input class="form-check-input"
+                            type="radio" name="opcoes" id="opcao3">Praia
+                    </label>
+                    <label for="opcao4" class="form-check-label form-check-inline"> <input class="form-check-input"
+                            type="radio" name="opcoes" id="opcao4">Montanha
+                    </label>
                 </section>
                 <br>
-                <section id="text-area">
+                <section class="form-group" id="text-area">
                     <label for="texto-resposta">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
                         TrybeTrip?
                     </label>
@@ -47,38 +53,32 @@
                     <textarea name="resposta" id="texto-resposta" cols="60" rows="10" maxlength="500"></textarea>
                 </section>
                 <br>
-                <section id="data">
+                <section class="form-group" id="data">
                     <label for="input-data">Qual a melhor data para sua viagem?
-                        <input type="date" name="data" id="input-data" placeholder="dd/mm/aaaa" maxlength="40"
-                            minlength="10" required>
+                        <input class="form-control" type="date" name="data" id="input-data" placeholder="dd/mm/aaaa"
+                            maxlength="40" minlength="10" required>
                     </label>
                 </section>
                 <br>
-                <br>
-                <section id="foto">
+                <section class="form-group" id="foto">
                     <label for="">Envie uma foto das suas férias!</label>
                     <br>
-                    <br>
-                    <input type="file" id="input-foto">
+                    <input class="form-control" type="file" id="input-foto">
                 </section>
-
                 <br>
-                <br>
-                <section id="concordos">
-                    <label for="concordo1"> Gostaria de receber outras incríveis oportunidades oferecidas pela
+                <section class="form-group" id="concordos">
+                    <input class="form-check form-check-inline" type="checkbox" name="concordos" id="concordo1"> <label
+                        for="concordo1"> Gostaria de receber outras incríveis oportunidades oferecidas pela
                         Trybe?</label>
-                    <input type="checkbox" name="concordos" id="concordo1">
                     <br>
-                    <br>
-                    <label for="concordo2"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de
+                    <input class="form-check form-check-inline" type="checkbox" name="concordos" id="concordo2"><label
+                        for="concordo2"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de
                         concursos futuros.</label>
-                    <input type="checkbox" name="concordos" id="concordo2">
-                    <br>
-                    <br>
                 </section>
+                <br>
                 <section id="buttons">
-                    <button type="submit" id="button-enviar" class="button">Enviar</button>
-                    <button type="reset" id="button-apagar" class="button">Apagar</button>
+                    <button type="submit" id="button-enviar" class="btn btn-success btn-lg">Enviar</button>
+                    <button type="reset" id="button-apagar" class="btn btn-danger btn-lg">Apagar</button>
                 </section>
             </form>
 
@@ -86,20 +86,11 @@
     </main>
 </body>
 <script>
-    //      <!--
-    // (Bônus) Faça a validação dos campos com limite de caracteres. Caso não estejam dentro do esperado ao clicar no botão de submit,
-    // um alerta deve ser mostrado com a mensagem: ‘Dados Inválidos’. Caso contrário, a mensagem ‘Dados enviados com sucesso! 
-    // Obrigado por participar do concurso TrybeTrip.’ deverá aparecer na tela. -->
-
     const send = document.getElementById("button-enviar");
 
     send.addEventListener("click", function (event) {
         event.preventDefault();
     })
-
-    if (!document.getElementById("concordo2").checked) {
-        document.getElementById("input-foto").disabled;
-    }
 
 </script>
 
