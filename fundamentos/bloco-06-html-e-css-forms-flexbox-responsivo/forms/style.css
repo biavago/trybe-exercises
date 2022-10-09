@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    padding: 5em;
+}
+
+h1 {
+    border: solid 2px black;
+    color: darkgreen;
+    font-size: 3em;
+    text-align: center;
+}
+
+.button {
+    background-color: lightgreen;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: darkgreen;
+}
