@@ -10,13 +10,3 @@ h1 {
     font-size: 3em;
     text-align: center;
 }
-
-.button {
-    background-color: lightgreen;
-    font-size: 1em;
-    padding: 10px;
-}
-
-.button:hover {
-    background-color: darkgreen;
-}
