@@ -1,29 +1,22 @@
-header {
-    color:cadetblue;
-    font-family: sans-serif;
-    font-size: 2em;
-    text-align: center;
-
-}
-
-main {
+body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding: 5em;
 }
 
-#personal-info {
-    margin-top: 3px;
-}
-
-#formulario {
+h1 {
     border: solid 2px black;
-    height: 400px;
-    margin: auto;
-    padding: 2em;
-    width: 400px;
+    color: darkgreen;
+    font-size: 3em;
     text-align: center;
 }
 
-#buttons {
-    margin: auto;
+.button {
+    background-color: lightgreen;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: darkgreen;
 }
